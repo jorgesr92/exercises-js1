@@ -45,7 +45,15 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
+const veryPositive = ["It is certain.", "It is decidedly so.", "Without a doubt.", "Yes - definitely.", "You may rely on it."];
+const positive = ["As I see it, yes.", "Most likely.", "Outlook good.", "Yes.", "Signs point to yes."];
+const negative = ["Reply hazy, try again.", "Ask again later.", "Better not tell you now.", "Cannot predict now.", "Concentrate and ask again."];
+const veryNegative = ["Don't count on it.", "My reply is no.", "My sources say no.", "Outlook not so good.", "Very doubtful."];
+const answersOp = [veryPositive, positive, negative, veryNegative];
+
 function shakeBall() {
+  console.log("The ball has shaken!");
+  return answersOp[Math.floor(Math.random()*4)][Math.floor(Math.random()*5)]
 }
 
 // This function should say whether the answer it is given is
@@ -55,6 +63,21 @@ function shakeBall() {
 // - very negative
 // This function should expect to be called with any value which was returned by the shakeBall function.
 function checkAnswer(answer) {
+  for (x in answersOp){
+    for (y in answersOp[x]){
+      if (answer === answersOp[x][y]){
+        if (x == 0){
+          return "very positive";
+        } else if (x == 1){
+          return "positive";
+        } else if (x == 2){
+          return "negative";
+        } else if (x == 3){
+          return "very negative";
+        }
+      }
+    }
+  }
 }
 
 /* ======= TESTS - DO NOT MODIFY =====
@@ -92,17 +115,17 @@ function testAll() {
   test(`shakeBall returns an string answer`, typeof answer === "string");
 
   test(
-    `checkAnswer("It is decidedly so.") returns "very positive`,
+    `checkAnswer("It is decidedly so.") returns "very positive"`,
     checkAnswer("It is decidedly so.") === "very positive"
   )
 
   test(
-    `checkAnswer("My reply is no.") returns "very negative`,
+    `checkAnswer("My reply is no.") returns "very negative"`,
     checkAnswer("My reply is no.") === "very negative"
   )
 
   test(
-    `checkAnswer returns the level of positivity"`,
+    `checkAnswer returns the level of positivity`,
     ["very positive", "positive", "negative", "very negative"].includes(
       checkAnswer(answer)
     )
