@@ -10,8 +10,8 @@ function per_calc(num_mentors, num_students){
 }
 
 function message_result(a, b){
-    var per_mentors = Math.round(per_calc(a, b));
-    var message = "Percentage students: "+ (100-per_mentors) +"% \ Percentage mentors: "+ per_mentors +"%";
+    let per_mentors = Math.round(per_calc(a, b));
+    let message = "Percentage students: "+ (100-per_mentors) +"% \ Percentage mentors: "+ per_mentors +"%";
     return message;
 }
 
