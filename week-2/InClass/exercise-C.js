@@ -1,7 +1,7 @@
 function numberChecker(num) {
   if (num > 20) {
     return `${num} is greater than 20`;
-  } else if (num == 20) {
+  } else if (num === 20) {
     return `${num} is equal to 20`;
   } else if (num < 20) {
     return `${num} is less than 20`;
@@ -12,5 +12,6 @@ function numberChecker(num) {
 
 console.log(numberChecker(4));
 console.log(numberChecker(34));
+console.log(numberChecker("20"));
 console.log(numberChecker(20));
 console.log(numberChecker("No soy un Número"));
