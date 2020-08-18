@@ -7,3 +7,7 @@ function boolChecker(bool) {
 }
 
 console.log(boolChecker(true));
+console.log(boolChecker(false));
+console.log(boolChecker("true"));
+console.log(boolChecker("SoyBoolean"));
+console.log(boolChecker(0));
