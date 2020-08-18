@@ -1,5 +1,7 @@
 function happyOrSad(estado) {
-    if (typeof estado === "string") {
+    if (typeof estado === "number") {
+        return `Beep beep boop`;
+    } else if (typeof estado === "string") {
         let a = estado.toLowerCase();
         if (a === "happy"){
             return `Good job, you're doing great!`;
@@ -8,9 +10,7 @@ function happyOrSad(estado) {
         } else {
             return `I'm sorry, I'm still learning about feelings!`;
         }
-    } else if (typeof estado === "number") {
-      return `Beep beep boop`;
-    } else {
+    }else {
         return `I'm sorry, I'm still learning about feelings!`;
     }
   }
