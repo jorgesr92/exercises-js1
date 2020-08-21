@@ -13,3 +13,17 @@ const daysOfWeek = [
   "Saturday",
   "Sunday",
 ];
+
+function stringWithT(arr){
+  let arr2 = [];
+  index = 0;
+  for (x in arr){
+    if (arr[x].charAt(0).toUpperCase() === "T"){
+      arr2[index] = arr[x];
+      index = index + 1;
+    }
+  }
+  return arr2;
+}
+
+console.log(stringWithT(daysOfWeek));
