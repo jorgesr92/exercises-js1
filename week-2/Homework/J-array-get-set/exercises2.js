@@ -8,6 +8,13 @@
 
 var numbers = [1, 2, 3]; // Don't change this array literal declaration
 
+function addValues(valueToAdd, arr){
+  arr[arr.length]=valueToAdd;
+  return arr;
+}
+
+numbers = addValues(4,numbers)
+
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
