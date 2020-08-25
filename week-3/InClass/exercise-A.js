@@ -1,0 +1,10 @@
+let alumnos = ["Jorge", "antonio", "Marc", "Daniel", "Marta"];
+console.log(alumnos.length);
+console.log(alumnos);
+alumnos.unshift("Alberto");
+console.log(alumnos.length);
+console.log(alumnos);
+alumnos.push("Maria");
+console.log(alumnos.length);
+console.log(alumnos);
+alumnos.sort();
