@@ -44,3 +44,11 @@ console.log(abracaFunction(yourFunc));*/
 console.log(abracaFunction((arr) => arr.map((element) => element.toUpperCase())));
 
 console.log(abracaFunction((arr) => arr.sort()));
+
+
+function nuevoNombre(seteoNombre){
+    let studentsA = ["Jorge", "Antonio", "Marc", "Daniel", "Marta"];
+    return seteoNombre(studentsA);
+}
+
+console.log(nuevoNombre(arr => arr.map((nuevaCadena)=>nuevaCadena+"!")));
