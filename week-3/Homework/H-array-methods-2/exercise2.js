@@ -10,7 +10,7 @@
 function capitalise(str) {
   let arrStr = str.split("");
   arrStr[0] = arrStr[0].toUpperCase();
-  return arrStr.join("")
+  return arrStr.join("");
 }
 
 /* 
