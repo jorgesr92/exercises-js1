@@ -16,4 +16,10 @@ const arr = [
 
 
 
-  const newArr = arr.filter(el => typeof el === "string").map(element => element.toUpperCase().concat("!")).forEach(element => console.log(element));
+const newArr = arr.filter(el => typeof el === "string").map(element => element.toUpperCase().concat("!"));
+
+newArr.forEach(element => console.log(element));
+
+console.log(newArr);
+
+// arr.filter(el => typeof el === "string").map(element => element.toUpperCase().concat("!")).forEach(element => console.log(element));
