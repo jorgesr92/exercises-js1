@@ -7,7 +7,10 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
+function journeyPlanner(arr, typeTransport) {
+  let places = [];
+  arr.filter(element => element.some(el => el.toLowerCase() === typeTransport)).forEach(el => places.push(el[0]));
+  return places;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
