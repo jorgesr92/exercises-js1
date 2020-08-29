@@ -23,7 +23,8 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
-
+  const chars = ["!", "#", "$", "%", ".", "*", "&"];
+  return passwords.map(el => (el.length >= 5 && el.split().every(element => typeof element === "number") && el.split().every(element => chars.some( el => el === element))) === true ? true:false);
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
