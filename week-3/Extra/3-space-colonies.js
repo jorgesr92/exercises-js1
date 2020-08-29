@@ -8,8 +8,8 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
-
+function colonisers(arr) {
+  return arr.filter(el => el.charAt(0) === "A" && el.split(" ")[el.split(" ").length - 1] === "family");
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

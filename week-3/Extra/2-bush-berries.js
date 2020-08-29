@@ -10,8 +10,8 @@
   Use the tests to confirm which message to return
 */
 
-function bushChecker() {
-
+function bushChecker(arr) {
+  return arr.some(el => el != "pink") === true ? "Toxic! Leave bush alone!": "Bush is safe to eat from";
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
